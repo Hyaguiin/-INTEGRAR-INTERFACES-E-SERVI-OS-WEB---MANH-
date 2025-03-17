@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente
+.env
+
+# Diretórios do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup do editor
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de build temporários ou de compilação
+dist/
+build/
+coverage/
+
+# Diretórios do sistema de testes (ex: Jest, Mocha, etc)
+test-results/
+
+# Arquivos gerados por ferramentas de packaging (ex: Parcel, Webpack)
+.cache/
