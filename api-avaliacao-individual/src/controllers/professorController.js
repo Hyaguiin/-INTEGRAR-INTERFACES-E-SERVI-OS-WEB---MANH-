@@ -1,25 +1,38 @@
 
-const Professor = require("../models/professor");
+const jwt = require("jsonwebtoken"); 
+const Professor = require("../models/Professor");
+require("dotenv").config();
 
- const criarProfessor = async (req, res) => {
+const secretKey = process.env.JWT_KEY;  
+
+const criarProfessor = async (req, res) => {
   const { nome, idade, disciplinasIds } = req.body;
   try {
-
    
     const novoProfessor = new Professor({
       nome,
       idade,
-      disciplinas: disciplinasIds
+      disciplinas: disciplinasIds,
     });
 
+    
     await novoProfessor.save();
 
-    res.json({
+    
+    const token = jwt.sign(
+      { id: novoProfessor._id, nome: novoProfessor.nome },  
+      secretKey,  
+      { expiresIn: "1h" }  
+    );
+
+  
+    res.status(201).json({
       message: "Professor criado com sucesso!",
       professor: novoProfessor,
+      token: token,
     });
   } catch (err) {
-    res.status(500).json({ message: err.message + ` Não foi possível criar o professor` });
+    res.status(500).json({ message: err.message + " Não foi possível criar o professor" });
   }
 };
 

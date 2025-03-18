@@ -1,4 +1,4 @@
-const Turma = require("../models/turma");
+const Turma = require("../models/Turma");
  const criarTurma = async (req, res) => {
   const { nome, alunosIds, professorId } = req.body;
 

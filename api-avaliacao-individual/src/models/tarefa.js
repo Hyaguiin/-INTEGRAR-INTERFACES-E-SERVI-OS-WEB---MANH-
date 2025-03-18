@@ -1,5 +1,5 @@
 let mongoose = require("mongoose");
-const Aluno = require("../models/Aluno.js");
+const Aluno = require("./Aluno.js");
 
 let tarefaSchema = new mongoose.Schema({
   titulo: { type: String, required: true },

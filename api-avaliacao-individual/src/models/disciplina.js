@@ -1,5 +1,5 @@
 let mongoose = require("mongoose");
-const Tarefa = require("./tarefa.js");
+const Tarefa = require("./Tarefa.js");
 
 let disciplinaSchema = new mongoose.Schema({
   nome: { type: String, required: true },

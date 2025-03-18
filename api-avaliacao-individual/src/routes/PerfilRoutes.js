@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const perfilController = require("../controllers/perfilController.js");
+const perfilController = require("../controllers/PerfilController.js");
 
 router.get("/", perfilController.obterTodosPerfis);
 router.post("/", perfilController.criarPerfil);

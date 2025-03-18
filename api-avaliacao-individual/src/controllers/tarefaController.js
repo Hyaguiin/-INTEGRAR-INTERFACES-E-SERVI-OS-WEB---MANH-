@@ -1,4 +1,4 @@
-const Tarefa = require("../models/tarefa");
+const Tarefa = require("../models/Tarefa");
  const criarTarefa = async (req, res) => {
   const { titulo, alunoId, disciplinasIds } = req.body;
   const concluida = false;

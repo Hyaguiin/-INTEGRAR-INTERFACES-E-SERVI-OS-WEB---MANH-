@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const disciplinaController = require("../controllers/disciplinaController.js");
+const disciplinaController = require("../controllers/DisciplinaController.js");
 
 router.get("/", disciplinaController.obterTodasDisciplinas);
 router.post("/", disciplinaController.criarDisciplina);

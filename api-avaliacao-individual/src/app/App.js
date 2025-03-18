@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const dbConnect = require("../database/db");
+const dbConnect = require("../database/Db");
 const cors = require("cors");
 const aluno = require("../routes/AlunoRoutes");
 const disciplina = require("../routes/DisciplinaRoutes");
@@ -8,7 +8,7 @@ const perfil = require("../routes/PerfilRoutes");
 const professor = require("../routes/ProfessorRoutes");
 const tarefa = require("../routes/TarefaRoutes");
 const turma = require("../routes/TurmaRoutes");
-const authToken = require('../middleware/authMiddleware');
+const authToken = require('../middleware/AuthMiddleware');
 
 const app = express();
 app.use(bodyParser.json());

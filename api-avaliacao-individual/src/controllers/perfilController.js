@@ -1,4 +1,4 @@
-const Perfil = require("../models/perfil");
+const Perfil = require("../models/Perfil");
  const criarPerfil = async (req, res) => {
   const { matricula, telefone, endereco, alunoId } = req.body;
 

@@ -1,4 +1,4 @@
-const Disciplina = require("../models/disciplina"); 
+const Disciplina = require("../models/Disciplina"); 
 const criarDisciplina = async (req, res) => {
   const { nome, descricao, dataInicio, dataFim, tarefasIds } = req.body;
 

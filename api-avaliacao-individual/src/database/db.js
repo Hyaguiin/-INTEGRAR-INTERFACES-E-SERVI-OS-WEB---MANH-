@@ -12,7 +12,7 @@ const dbConnect = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log(`Conectado ao banco de dados!`);
+    console.log(`Conectado ao banco de dados! ✅✅`);
   } catch (err) {
     console.error(`Não foi possível conectar:  ${err}`);
   }
